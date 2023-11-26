@@ -1,0 +1,7 @@
+qdrant-client 
+faker
+fastapi uvicorn
+sentence_transformers
+numpy 
+pandas 
+matplotlib
