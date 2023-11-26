@@ -20,6 +20,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip install sentence_transformers
 
 pip install fastapi uvicorn
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Go to data_loader.py
