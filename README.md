@@ -10,7 +10,7 @@ Dataset used from BigBasket.
 1. Ensure docker is installed.
    
 **Install these libraries**
-
+----------------------------------------------------------------------------------------------------------------------------------------------
 pip install qdrant-client --user
 
 pip install faker
@@ -20,7 +20,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 pip install sentence_transformers
 
 pip install fastapi uvicorn
-
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 2. Go to data_loader.py
    
@@ -41,7 +41,8 @@ pip install fastapi uvicorn
   Vector database would be created and data would be uploaded.
   
   Ensure Docker is running in backgroumd.
-  
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 4. You are almost ready to go!
    
    Go to the terminal and enter " python main.py".
@@ -55,7 +56,7 @@ pip install fastapi uvicorn
    Enter your query!
    
    See and enjoy the results.
-   
+----------------------------------------------------------------------------------------------------------------------------------------------   
 Modules:
 1. Main.py
    
@@ -81,9 +82,11 @@ Modules:
    Implementation of MMR algorithm from scratch.
    Lambda parameter is kept at 0.5, can be changed accordingly.
 
+----------------------------------------------------------------------------------------------------------------------------------------------
 
+# Example queries and results!
 
-# User query: "Paneer items"
+**User query: "Paneer items"**
 ![image](https://github.com/PromitHal/ChaabiAssignPromit/assets/83832850/33410855-4f3f-4134-864e-c09d3425f5c2)
 
 
