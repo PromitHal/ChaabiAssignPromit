@@ -6,39 +6,64 @@ Dataset used from BigBasket.
 ![image](https://github.com/PromitHal/ChaabiAssignPromit/assets/83832850/f22c5970-20b1-4a1f-905d-7034d1ab964a)
 
 **Initial Steps**
+
 1. Ensure docker is installed.
    
 **Install these libraries**
-# !pip install qdrant-client --user
-# !pip install faker
-# !pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-# !pip install sentence_transformers
-# !pip install fastapi uvicorn
+
+pip install qdrant-client --user
+
+pip install faker
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+pip install sentence_transformers
+
+pip install fastapi uvicorn
 
 
 2. Go to data_loader.py
+   
     // replace these as per your needs
+   
     collection_name="Promit_BIGBasket_CHAABI"
+   
     path_data=r'bigb.csv'
+   
     name_model="all-MiniLM-L6-v2"
+   
     device="cuda"
+   
   A json file corresponding to the data would be saved as "file.json".
+  
   A numpy file corresponding to embedded vectors would be saved as "vectors.npy"
+  
   Vector database would be created and data would be uploaded.
+  
   Ensure Docker is running in backgroumd.
-3. You are almost ready to go!
+  
+4. You are almost ready to go!
+   
    Go to the terminal and enter " python main.py".
+   
    Hurray! now move to: http://localhost:8085/docs#/default/search_startup_api_search_get
+   
    Click on "GET".
+   
    Click on "Try it"
+   
    Enter your query!
+   
    See and enjoy the results.
    
 Modules:
 1. Main.py
-2. NeuralSearch.py
-3. MMR.py
-4. data_loader.py
+   
+3. NeuralSearch.py
+
+4. MMR.py
+   
+6. data_loader.py
 
    **Main.py**: Used for deploying the app using Fast API
    Please mention collection name in the "collection_name" variable in main.py
