@@ -1,6 +1,61 @@
 # ChaabiAssignPromit
 
 
+Dataset used from BigBasket.
+
+![image](https://github.com/PromitHal/ChaabiAssignPromit/assets/83832850/f22c5970-20b1-4a1f-905d-7034d1ab964a)
+
+**Initial Steps**
+1. Ensure docker is installed.
+   
+**Install these libraries**
+# !pip install qdrant-client --user
+# !pip install faker
+# !pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# !pip install sentence_transformers
+# !pip install fastapi uvicorn
+
+
+2. Go to data_loader.py
+    // replace these as per your needs
+    collection_name="Promit_BIGBasket_CHAABI"
+    path_data=r'bigb.csv'
+    name_model="all-MiniLM-L6-v2"
+    device="cuda"
+  A json file corresponding to the data would be saved as "file.json".
+  A numpy file corresponding to embedded vectors would be saved as "vectors.npy"
+  Vector database would be created and data would be uploaded.
+  Ensure Docker is running in backgroumd.
+3. You are almost ready to go!
+   Go to the terminal and enter " python main.py".
+   Hurray! now move to: http://localhost:8085/docs#/default/search_startup_api_search_get
+   Click on "GET".
+   Click on "Try it"
+   Enter your query!
+   See and enjoy the results.
+   
+Modules:
+1. Main.py
+2. NeuralSearch.py
+3. MMR.py
+4. data_loader.py
+
+   **Main.py**: Used for deploying the app using Fast API
+   Please mention collection name in the "collection_name" variable in main.py
+
+   **NeuralSearch.py**:
+   Please enter your OPEN_AI api key.
+   Implements search from the vector database corresponding to "collection_name".
+   Cosine similarity based search.
+   Intially, 20 most similar vectors are retrieved.
+   Maximum Margin Relevance Algorithm (MMR) is used to re-rank the results to ensure diversity, and top 5 results are selected.
+   Call to GPT-3.5 Turbo (CHAT GPT) is made with prompt like this:![image](https://github.com/PromitHal/ChaabiAssignPromit/assets/83832850/a3fa043d-fdf8-4fd4-9da5-6d1f379c6577)
+   Summarized results are returned.
+
+   **MMR.py**
+   Implementation of MMR algorithm from scratch.
+   Lambda parameter is kept at 0.5, can be changed accordingly.
+
 
 
 # User query: "Paneer items"
